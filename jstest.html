@@ -9,23 +9,32 @@
         <script>
             console.log("Hello, World!")
 
-            function add7(n){
-                return n + 7;
+            humanScore = 0;
+            computerScore = 0;
+            
+            function getComputerChoice(){
+                let int = Math.floor(Math.random() * 3);
+
+                if (int === 0){
+                    return "Rock";
+                } else if (int === 1){
+                    return "Paper";
+                } else {
+                    return "Scissors";
+                }
             }
 
-            function mulitply(a, b){
-                return a * b;
+            function getHumanChoice(){
+                let choice = prompt("Type either 'Rock', 'Paper', or 'Scissors'!");
+                choice = choice.trim();
+                return choice;
             }
 
-            function capitalize(str){
-                str = str.toLowerCase();
-                return str[0].toUpperCase() + str.slice(1);
+            function playRound(){
+
             }
 
-            function lastLetter(str){
-                return str[str.length - 1];
-            }
-
+        
         </script>
         
     </body>
